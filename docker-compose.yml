@@ -42,11 +42,3 @@ services:
 
   redis:
     image: 'redis:latest'
-
-#networks:
-#  internal:
-#    driver: bridge
-#    ipam:
-#      driver: default
-#      config:
-#        - subnet: 192.168.220.0/28
