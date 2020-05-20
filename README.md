@@ -2,6 +2,6 @@
 
 `make install`
 
-#run server:
+# run server:
 
 `make run`
