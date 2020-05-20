@@ -1,0 +1,717 @@
+{
+	"info": {
+		"_postman_id": "8d2a37f0-5295-4380-add9-0f0d956e607c",
+		"name": "test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "leagues create",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\":\"test name1\",\n\t\"slug\":\"test-slug1\",\n\t\"url\":\"\",\n\t\"image_url\":\"https://career.habr.com/conversations/temirlan-bachiev\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "127.0.0.1/api/leagues/create",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"path": [
+						"api",
+						"leagues",
+						"create"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "test",
+							"disabled": true
+						},
+						{
+							"key": "slug",
+							"value": "test",
+							"disabled": true
+						},
+						{
+							"key": "url",
+							"value": "https://career.habr.com/conversations/temirlan-bachiev",
+							"disabled": true
+						},
+						{
+							"key": "image_url",
+							"value": "http://test.dv/leagues/details/4152",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Leagues tree",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\":\"test name\",\n\t\"slug\":\"test-slug\",\n\t\"url\":\"\",\n\t\"image_url\":\"\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "127.0.0.1/api/leagues/details/4152",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"path": [
+						"api",
+						"leagues",
+						"details",
+						"4152"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "test",
+							"disabled": true
+						},
+						{
+							"key": "slug",
+							"value": "test",
+							"disabled": true
+						},
+						{
+							"key": "url",
+							"value": "https://career.habr.com/conversations/temirlan-bachiev",
+							"disabled": true
+						},
+						{
+							"key": "image_url",
+							"value": "http://test.dv/leagues/details/4152",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Leagues list",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\":\"test name\",\n\t\"slug\":\"test-slug\",\n\t\"url\":\"\",\n\t\"image_url\":\"\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "127.0.0.1/api/leagues/",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"path": [
+						"api",
+						"leagues",
+						""
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "test",
+							"disabled": true
+						},
+						{
+							"key": "slug",
+							"value": "test",
+							"disabled": true
+						},
+						{
+							"key": "url",
+							"value": "https://career.habr.com/conversations/temirlan-bachiev",
+							"disabled": true
+						},
+						{
+							"key": "image_url",
+							"value": "http://test.dv/leagues/details/4152",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Command create",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\":\"test name1\",\n\t\"slug\":\"test-slug1\",\n\t\"acronym\":\"aaaa\",\n\t\"location\":\"UA\",\n\t\"image_url\":\"https://career.habr.com/conversations/temirlan-bachiev\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "127.0.0.1/api/commands/create",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"path": [
+						"api",
+						"commands",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Commands list",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "127.0.0.1/api/commands/",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"path": [
+						"api",
+						"commands",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Command details",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"detailed_status\": 1,\n        \"finished\": 0,\n        \"forfeit\": 0,\n        \"position\": 1,\n        \"match_id\": 558455,\n        \"winner_type\": \"Team\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "127.0.0.1/api/game/create",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"path": [
+						"api",
+						"game",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Game create",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"detailed_stats\": 1,\n        \"finished\": 0,\n        \"forfeit\": 0,\n        \"position\": 1,\n        \"match_id\": 558455,\n        \"winner_type\": \"Team\",\n        \"status\": \"not_started\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "127.0.0.1/api/game/create",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"path": [
+						"api",
+						"game",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Game details",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"detailed_stats\": 1,\n        \"finished\": 0,\n        \"forfeit\": 0,\n        \"position\": 1,\n        \"match_id\": 558455,\n        \"winner_type\": \"Team\",\n        \"status\": \"not_started\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "127.0.0.1/api/game/details/17747",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"path": [
+						"api",
+						"game",
+						"details",
+						"17747"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Games list",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"detailed_stats\": 1,\n        \"finished\": 0,\n        \"forfeit\": 0,\n        \"position\": 1,\n        \"match_id\": 558455,\n        \"winner_type\": \"Team\",\n        \"status\": \"not_started\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "127.0.0.1/api/game/",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"path": [
+						"api",
+						"game",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Matches list",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"detailed_stats\": 1,\n        \"finished\": 0,\n        \"forfeit\": 0,\n        \"position\": 1,\n        \"match_id\": 558455,\n        \"winner_type\": \"Team\",\n        \"status\": \"not_started\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "127.0.0.1/api/matches/",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"path": [
+						"api",
+						"matches",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Match details",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"detailed_stats\": 1,\n        \"finished\": 0,\n        \"forfeit\": 0,\n        \"position\": 1,\n        \"match_id\": 558455,\n        \"winner_type\": \"Team\",\n        \"status\": \"not_started\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "127.0.0.1/api/matches/details/558455",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"path": [
+						"api",
+						"matches",
+						"details",
+						"558455"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Series list",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"detailed_stats\": 1,\n        \"finished\": 0,\n        \"forfeit\": 0,\n        \"position\": 1,\n        \"match_id\": 558455,\n        \"winner_type\": \"Team\",\n        \"status\": \"not_started\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "127.0.0.1/api/series",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"path": [
+						"api",
+						"series"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Series details",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"detailed_stats\": 1,\n        \"finished\": 0,\n        \"forfeit\": 0,\n        \"position\": 1,\n        \"match_id\": 558455,\n        \"winner_type\": \"Team\",\n        \"status\": \"not_started\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "127.0.0.1/api/series/details/2588",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"path": [
+						"api",
+						"series",
+						"details",
+						"2588"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Tournaments list",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"detailed_stats\": 1,\n        \"finished\": 0,\n        \"forfeit\": 0,\n        \"position\": 1,\n        \"match_id\": 558455,\n        \"winner_type\": \"Team\",\n        \"status\": \"not_started\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "127.0.0.1/api/tournaments",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"path": [
+						"api",
+						"tournaments"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Tournaments details",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"detailed_stats\": 1,\n        \"finished\": 0,\n        \"forfeit\": 0,\n        \"position\": 1,\n        \"match_id\": 558455,\n        \"winner_type\": \"Team\",\n        \"status\": \"not_started\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "127.0.0.1/api/tournaments/details/3935",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"path": [
+						"api",
+						"tournaments",
+						"details",
+						"3935"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Match create",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"name\": \"test match\",\n        \"slug\": \"test-match-slu21g\",\n        \"forfeit\": 0,\n        \"position\": 1,\n        \"match_id\": 558455,\n        \"winner_type\": \"Team\",\n        \"status\": \"not_started\",\n        \"rescheduled\": 0,\n        \"detailed_status\": 1,\n        \"draw\": 0,\n        \"match_type\": \"best_of\",\n        \"number_of_games\": 5,\n        \"tournament_id\": 3935\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "127.0.0.1/api/matches/create",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"path": [
+						"api",
+						"matches",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Tournaments create",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"name\": \"test match\",\n        \"slug\": \"test-match-aa\",\n        \"serie_id\": 2588,\n        \"live_supported\": 0,\n        \"begin_at\": \"2020-05-25 12:00:00\",\n        \"end_at\": \"2020-05-25 15:00:00\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "127.0.0.1/api/tournaments/create",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"path": [
+						"api",
+						"tournaments",
+						"create"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

@@ -1,15 +1,11 @@
 .PHONY: setup build run
 .SILENT: ip host
 
-install: setup build run update laravel-setup
-
+install: set-env setup build run update laravel-setup
 
 setup:
 	which docker-compose || sudo curl -L https://github.com/docker/compose/releases/download/1.24.0/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose;
 	which docker-compose || sudo chmod +x /usr/local/bin/docker-compose
-#
-# 	sudo chmod -R 777 project/storage project/bootstrap/cache
-# 	mkdir -p project/storage/framework/views
 
 build:
 	docker-compose   build
@@ -31,11 +27,9 @@ workspace:
 restart: clean run
 
 laravel-setup:
-	docker-compose exec -T php-fpm  composer install || echo done
 	docker-compose exec -T php-fpm  php artisan key:generate || echo done
 	docker-compose exec -T php-fpm  php artisan storage:link || echo done
-# 	docker-compose exec -T php-fpm  php artisan passport:install || echo done
-# 	docker-compose exec -T php-fpm  php artisan admin:reset 1 || echo done
+	docker-compose exec -T php-fpm  php artisan data:import || echo done
 
 migrate:
 	docker-compose exec -T php-fpm  php artisan migrate || echo done
@@ -54,4 +48,7 @@ clear-cache:
 
 
 update: composer clear-cache migrate ide-helper
+
+set-env:
+	[ -f project/.env ] || cp project/.env.example project/.env
 
