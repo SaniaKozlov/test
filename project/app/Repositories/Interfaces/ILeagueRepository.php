@@ -8,7 +8,5 @@ use Illuminate\Support\Collection;
 
 interface ILeagueRepository extends IRepository
 {
-    public function details(int $id): League;
-
-    public function getTree(int $id): League;
+    public function getTree(int $id): ?League;
 }

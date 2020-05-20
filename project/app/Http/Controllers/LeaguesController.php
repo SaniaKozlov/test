@@ -20,25 +20,36 @@ class LeaguesController extends Controller
 
     public function list(Request $request)
     {
+        $list = $this->_leagueRepository->list($request->input('page', 1));
+
         return $this->withPaginator(
-            $this->_leagueRepository->list($request->input('page', 1)),
+            $list,
             new LeaguesListTransformer()
         );
     }
 
     public function weblist(Request $request)
     {
-        return view('leagues.list', ['list' => $this->_leagueRepository->list($request->input('page', 1))]);
+        $list = $this->_leagueRepository->list($request->input('page', 1));
+
+        return view('leagues.list', ['list' => $list]);
     }
 
     public function details($id)
     {
-        return $this->response($this->_leagueRepository->getTree($id), new LeaguesTreeTransformer());
+        $item = $this->_leagueRepository->getTree($id);
+
+        return $this->response($item, new LeaguesTreeTransformer());
     }
 
     public function webdetails($id)
     {
-        return view('leagues.details', ['item' => $this->_leagueRepository->getTree($id)]);
+        $item = $this->_leagueRepository->getTree($id);
+        if (!$item) {
+            abort(404);
+        }
+
+        return view('leagues.details', ['item' => $item]);
     }
 
     public function create(CreateLeagueRequest $request)

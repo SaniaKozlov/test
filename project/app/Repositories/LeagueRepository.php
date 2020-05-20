@@ -16,13 +16,12 @@ class LeagueRepository extends BaseRepository implements ILeagueRepository
         parent::__construct($model);
     }
 
-    public function getTree(int $id): League
+    /**
+     * @param int $id
+     * @return League|null
+     */
+    public function getTree(int $id): ?League
     {
         return $this->model->with(['series', 'series.tournaments', 'series.tournaments.matches', 'series.tournaments.matches.games', 'series.tournaments.matches.opponents'])->find($id);
-    }
-
-    public function details(int $id): League
-    {
-        return $this->model->find($id);
     }
 }
