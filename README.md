@@ -1,4 +1,4 @@
-# instalation:
+# installation:
 
 `make install`
 
